@@ -85,18 +85,7 @@ export default function Navbar() {
           />
         </a>
         <a
-          href="https://github.com/KevalKankrecha-2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub
-            className="social"
-            size={25}
-            style={{ marginRight: "2rem" }}
-          />
-        </a>
-        <a
-          href="https://www.instagram.com/kevalkankrecha_2/"
+          href="https://www.instagram.com/darshan__tank_/"
           target="_blank"
           rel="noopener noreferrer"
         >

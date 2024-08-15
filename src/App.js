@@ -34,11 +34,11 @@ const App = () => {
         <AboutComponent id="about"/>
         <SkilComponent id="skill"/>
         <ProjectComponent
-          projectTitle="Yogi Nagar Yuvak Madal"
-          projectDesc="Through this web application, the admin can efficiently manage participants and various Sabha details, including present participants and activities conducted during the event. Admins have the flexibility to view Sabha details based on their specific requirements."
+          projectTitle="Study Of Consumer Satisfaction"
+          projectDesc="During my summer internship at Uratom Solar India Private Limited, I assessed consumer satisfaction with their products and services. I also honed my skills in time management, effective communication with clients, and teamwork."
           projectLink="https://github.com/KevalKankrecha-2/YOGINAGARYUVAK-MANDAL"
           deployedProjectLink="#"
-          projectImg={require('./Images/ProjectYoginagarYuvakMandal.png')}
+          projectImg={require('./Images/Screenshot_2024-08-15-12-31-51-007_cn.wps.xiaomi.abroad.lite.jpg')}
         />
         <ContactFormComponent id="contact"/>
         <FooterComponent />
