@@ -9,6 +9,7 @@ import FooterComponent from './Components/FooterComponent';
 import ProjectComponent from './Components/ProjectComponent';
 import ContactFormComponent from './Components/ContactFormComponent';
 import AboutComponent from './Components/AboutComponent';
+import CertificateComponent from './Components/CertificateComponent';
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
           deployedProjectLink="#"
           projectImg={require('./Images/Screenshot_2024-08-15-12-31-51-007_cn.wps.xiaomi.abroad.lite.jpg')}
         />
+         <CertificateComponent id="certificate"/>
         <ContactFormComponent id="contact"/>
         <FooterComponent />
     </>

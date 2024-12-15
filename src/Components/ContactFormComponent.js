@@ -5,12 +5,7 @@ import emailjs from '@emailjs/browser';
 
 export default function ContactFormComponent({ id }) {
   const form = useRef();
-
-
-
-
-
-  return (
+   return (
     <div className='contact-window' id={id}>
       <h1>Let's Get in Touch.</h1>
       <p>Discuss a project or just want to say Hi? My inbox is open for all.</p>
