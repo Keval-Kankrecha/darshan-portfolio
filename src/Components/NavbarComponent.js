@@ -56,11 +56,21 @@ export default function Navbar() {
           <Link
           className="navLink" 
             activeClass="active"
+            to="certificate"
+            spy={true}
+            smooth={true}
+            duration={10}>Certificate</Link>
+        </li>
+        <li>
+          <Link
+          className="navLink" 
+            activeClass="active"
             to="skill"
             spy={true}
             smooth={true}
             duration={30}>Skills</Link>
         </li>
+     
         <li>
           <Link
           className="navLink"
