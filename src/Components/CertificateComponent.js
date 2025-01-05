@@ -36,7 +36,7 @@ const SkilComponent = ({id}) => {
                 <div className="skillset">
                     <figure>
                         <img src={cer3} className="img" style={{ width: '300px', height: 'auto' }} />
-                        <figcaption className="caption">Floric-2024</figcaption>
+                        <figcaption className="caption">NISM- Securities Markets Foundation</figcaption>
                     </figure>
                     <figure>
                         <img src={cer4} className="img" style={{ width: '300px', height: 'auto' }} />
