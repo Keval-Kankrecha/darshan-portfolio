@@ -1,7 +1,7 @@
 // A value is a string or an array of strings (array → one line per entry).
 // Fields with an empty value are skipped, and so are sections left with no fields.
 
-export const fullName = 'Darshan Tank';
+export const fullName = 'Darshan AshwinBhai Tank';
 export const site = ''; // e.g. 'darshantank.dev' — shown in each page's footer when set
 export const portrait = '/bio-data/20241011_114816.jpg';
 export const initialPhotos = ['/bio-data/photo-1.jpg', '/bio-data/photo-2.jpg'];

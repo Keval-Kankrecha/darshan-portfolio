@@ -1,5 +1,5 @@
 import React from "react";
-import myProfile from "../Images/1723702429199.jpg";
+import myProfile from "../../public/bio-data/20241011_114816.jpg";
 
 export default function AboutComponent({ id }) {
   return (
