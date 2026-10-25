@@ -7,7 +7,6 @@ import AnimatedCursor from "react-animated-cursor"
 import HeaderComponent from './Components/HeaderComponent';
 import SkilComponent from './Components/SkillComponent';
 import FooterComponent from './Components/FooterComponent';
-import ProjectComponent from './Components/ProjectComponent';
 import ContactFormComponent from './Components/ContactFormComponent';
 import AboutComponent from './Components/AboutComponent';
 import CertificateComponent from './Components/CertificateComponent';
@@ -36,13 +35,6 @@ const Portfolio = () => {
         <HeaderComponent />
         <AboutComponent id="about"/>
         <SkilComponent id="skill"/>
-        <ProjectComponent
-          projectTitle="Study Of Consumer Satisfaction"
-          projectDesc="During my summer internship at Uratom Solar India Private Limited, I assessed consumer satisfaction with their products and services. I also honed my skills in time management, effective communication with clients, and teamwork."
-          projectLink="https://github.com/KevalKankrecha-2/YOGINAGARYUVAK-MANDAL"
-          deployedProjectLink="#"
-          projectImg={require('./Images/Screenshot_2024-08-15-12-31-51-007_cn.wps.xiaomi.abroad.lite.jpg')}
-        />
          <CertificateComponent id="certificate"/>
         <ContactFormComponent id="contact"/>
         <FooterComponent />

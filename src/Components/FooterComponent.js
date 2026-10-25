@@ -8,7 +8,7 @@ export default function FooterComponent() {
   }
   return (
     <div className='footer'>
-        Made with ❤ by Darshan Tank <span style={styleSymbol}>©</span> 2024
+        Made with ❤ by Darshan Tank <span style={styleSymbol}>©</span> {new Date().getFullYear()}
     </div>
   )
 }
