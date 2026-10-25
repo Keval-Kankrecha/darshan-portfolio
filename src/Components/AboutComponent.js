@@ -1,5 +1,5 @@
 import React from "react";
-import myProfile from "../../public/bio-data/20241011_114816.jpg";
+const myProfile = "/bio-data/20241011_114816.jpg"; // served from public/
 
 export default function AboutComponent({ id }) {
   return (
