@@ -1,0 +1,326 @@
+@page { size: A4; margin: 0; }
+
+.bio-data {
+  --cream: #fbf3e4;
+  --card: #fdfaf2;
+  --gold: #c9a227;
+  --gold-deep: #8b6414;
+  --gold-soft: rgba(201, 162, 39, .3);
+  --ink: #43301a;
+  --ink-soft: #6b5335;
+  --sans: Calibri, Carlito, "Segoe UI", system-ui, sans-serif;
+
+  display: block;
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* The portfolio's global `*` rule paints everything white Poppins; undo it here. */
+.bio-data,
+.bio-data * {
+  box-sizing: border-box;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 400;
+}
+
+.bio-data * { margin: 0; padding: 0; }
+
+/* ---------- A4 pages ---------- */
+
+.bio-data .page {
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  padding: 10mm;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+}
+
+.bio-data .page:last-of-type { page-break-after: auto; }
+
+.bio-data .card {
+  position: relative;
+  height: 100%;
+  background: var(--card);
+  border: 1px solid var(--gold-soft);
+  padding: 9mm 13mm;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(ellipse 70% 34% at 50% 0, rgba(201, 162, 39, .1), transparent 70%);
+}
+
+/* ---------- Ornaments ---------- */
+
+.bio-data .corner {
+  position: absolute;
+  width: 22mm;
+  height: 22mm;
+  background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23c9a227' stroke-width='1.4' opacity='.62'%3E%3Cpath d='M2 2h96M2 2v96'/%3E%3Cpath d='M8 8h84M8 8v84' opacity='.5'/%3E%3Cpath d='M14 46c0-18 14-32 32-32'/%3E%3Cpath d='M22 46c0-13 11-24 24-24' opacity='.7'/%3E%3Cpath d='M46 14c0 9-4 14-11 17 7 3 11 8 11 17 0-9 4-14 11-17-7-3-11-8-11-17z' fill='%23c9a227' fill-opacity='.16'/%3E%3Ccircle cx='14' cy='46' r='2.6' fill='%23c9a227' stroke='none'/%3E%3Ccircle cx='46' cy='14' r='2.6' fill='%23c9a227' stroke='none'/%3E%3C/svg%3E");
+}
+
+.bio-data .corner--tl { top: 4mm; left: 4mm; }
+.bio-data .corner--tr { top: 4mm; right: 4mm; transform: scaleX(-1); }
+.bio-data .corner--bl { bottom: 4mm; left: 4mm; transform: scaleY(-1); }
+.bio-data .corner--br { bottom: 4mm; right: 4mm; transform: scale(-1); }
+
+.bio-data .divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4mm;
+  margin: 3.5mm auto;
+  max-width: 90mm;
+  color: var(--gold);
+  font-size: 8pt;
+  line-height: 1;
+}
+
+.bio-data .divider::before,
+.bio-data .divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold) 70%);
+}
+
+.bio-data .divider::after { background: linear-gradient(to left, transparent, var(--gold) 70%); }
+
+/* ---------- Page 1 ---------- */
+
+.bio-data .head { text-align: center; flex-shrink: 0; }
+
+.bio-data .arch {
+  width: 33mm;
+  height: 41mm;
+  margin: 0 auto 3.5mm;
+  padding: 1.6mm;
+  border: 1px solid var(--gold);
+  border-radius: 999px 999px 3mm 3mm;
+  background: linear-gradient(170deg, rgba(201, 162, 39, .16), rgba(201, 162, 39, .03));
+}
+
+.bio-data .arch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 999px 999px 2mm 2mm;
+  display: block;
+}
+
+.bio-data .name {
+  font-size: 20pt;
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--gold-deep);
+  margin-bottom: 2mm;
+}
+
+/* The original spreads sections with space-between; with only a few fields filled
+   that leaves big gaps, so they stack from the top instead. */
+.bio-data .sections {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6mm;
+  padding-top: 2mm;
+}
+
+.bio-data .section h2 {
+  font-size: 12pt;
+  font-weight: 700;
+  letter-spacing: .005em;
+  color: var(--gold-deep);
+  padding-bottom: 1.3mm;
+  margin-bottom: 2.2mm;
+  border-bottom: 1px solid var(--gold-soft);
+}
+
+.bio-data .fields {
+  display: grid;
+  grid-template-columns: 42mm 1fr;
+  gap: 1.2mm 6mm;
+}
+
+.bio-data .fields dt {
+  font-size: 9.4pt;
+  font-weight: 700;
+  letter-spacing: .01em;
+  color: var(--gold-deep);
+  line-height: 1.55;
+}
+
+.bio-data .fields dd {
+  font-size: 10pt;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+}
+
+.bio-data .fields dd span { display: block; }
+
+.bio-data .foot {
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 8.2pt;
+  letter-spacing: .09em;
+}
+
+.bio-data .foot a {
+  color: var(--gold-deep);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ---------- Page 2 ---------- */
+
+.bio-data .page--photos .card { padding: 9mm 7mm; }
+.bio-data .page--photos .foot { margin-top: 4.5mm; }
+
+.bio-data .gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7mm;
+  align-content: center;
+}
+
+.bio-data .gallery figure {
+  aspect-ratio: 3 / 5;
+  padding: 1.6mm;
+  border: 1px solid var(--gold-soft);
+  border-radius: 2mm;
+  background: linear-gradient(165deg, rgba(201, 162, 39, .12), rgba(201, 162, 39, .02));
+}
+
+.bio-data .gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.4mm;
+  display: block;
+}
+
+/* ---------- Gate ---------- */
+
+.bio-data .gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6mm;
+}
+
+.bio-data .gate__card {
+  position: relative;
+  width: 100%;
+  max-width: 108mm;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--gold-soft);
+  padding: 16mm 12mm;
+  background-image: radial-gradient(ellipse 70% 40% at 50% 0, rgba(201, 162, 39, .1), transparent 70%);
+}
+
+.bio-data .gate__card .corner { width: 13mm; height: 13mm; top: auto; bottom: auto; }
+.bio-data .gate__card .corner--tl,
+.bio-data .gate__card .corner--tr { top: 2.5mm; }
+.bio-data .gate__card .corner--bl,
+.bio-data .gate__card .corner--br { bottom: 2.5mm; }
+.bio-data .gate__card .corner--tl,
+.bio-data .gate__card .corner--bl { left: 2.5mm; }
+.bio-data .gate__card .corner--tr,
+.bio-data .gate__card .corner--br { right: 2.5mm; }
+
+.bio-data .gate__title {
+  font-size: 19pt;
+  font-weight: 700;
+  color: var(--gold-deep);
+}
+
+.bio-data .gate__hint {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin-bottom: 6mm;
+}
+
+.bio-data .gate__label {
+  display: block;
+  font-size: 8.4pt;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 1.8mm;
+}
+
+.bio-data .gate__input {
+  width: 100%;
+  font-size: 12pt;
+  text-align: center;
+  letter-spacing: .14em;
+  padding: 2.6mm 3mm;
+  background: var(--cream);
+  border: 1px solid var(--gold-soft);
+  border-radius: 1mm;
+  outline: none;
+}
+
+.bio-data .gate__input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(201, 162, 39, .18);
+}
+
+.bio-data .gate__btn {
+  margin-top: 5mm;
+  width: 100%;
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--card);
+  background: var(--gold-deep);
+  border: 1px solid var(--gold-deep);
+  border-radius: 1mm;
+  padding: 3mm;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.bio-data .gate__btn:hover,
+.bio-data .gate__btn:focus-visible { background: #6f4f0f; }
+
+.bio-data .toast {
+  position: fixed;
+  left: 50%;
+  bottom: 8mm;
+  transform: translate(-50%);
+  max-width: calc(100vw - 12mm);
+  font-size: 9.6pt;
+  line-height: 1.4;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--gold-soft);
+  border-left: 3px solid #9b2c2c;
+  border-radius: 1mm;
+  padding: 3mm 5mm;
+  box-shadow: 0 6px 24px rgba(67, 48, 26, .16);
+}
+
+/* ---------- Phones / small screens ---------- */
+
+@media screen and (max-width: 840px) {
+  .bio-data .page { width: 100%; height: auto; padding: 3mm; }
+  .bio-data .card { height: auto; padding: 9mm 6mm; }
+  .bio-data .corner { width: 15mm; height: 15mm; }
+  .bio-data .sections { gap: 6mm; }
+  .bio-data .fields { grid-template-columns: 1fr; gap: 0; }
+  .bio-data .fields dt { margin-top: 2.6mm; }
+  .bio-data .gallery { grid-template-columns: 1fr; gap: 5mm; }
+}

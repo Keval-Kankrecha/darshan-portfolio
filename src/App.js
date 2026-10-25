@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './index.min.css';
 import NavbarComponnent from './Components/NavbarComponent';
 
@@ -10,8 +11,9 @@ import ProjectComponent from './Components/ProjectComponent';
 import ContactFormComponent from './Components/ContactFormComponent';
 import AboutComponent from './Components/AboutComponent';
 import CertificateComponent from './Components/CertificateComponent';
+import BioDataComponent from './Components/BioData/BioDataComponent';
 
-const App = () => {
+const Portfolio = () => {
   return (
     <>
       <AnimatedCursor
@@ -46,6 +48,16 @@ const App = () => {
         <FooterComponent />
     </>
 
+  );
+}
+
+// /bio-data is standalone: no cursor, navbar or footer, and it's not linked anywhere.
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/bio-data" element={<BioDataComponent />} />
+      <Route path="*" element={<Portfolio />} />
+    </Routes>
   );
 }
 
